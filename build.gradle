@@ -5,9 +5,11 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:8.1.0'
+        classpath 'com.github.ksoichiro:gradle-eclipse-aar-plugin:0.3.1'
     }
 }
 
@@ -30,6 +32,8 @@ configurations.all {
 }
 
 android {
+    namespace "ch.poole.android.dummycameraapp"
+    
     compileSdkVersion 28
 
     defaultConfig {
